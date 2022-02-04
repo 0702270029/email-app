@@ -1,0 +1,163 @@
+<body>
+  <!-- [ Pre-loader ] start -->
+  <div class="loader-bg">
+    <div class="loader-bar"></div>
+  </div>
+  <!-- [ Pre-loader ] end -->
+  <div id="pcoded" class="pcoded">
+    <div class="pcoded-overlay-box"></div>
+    <div class="pcoded-container navbar-wrapper">
+      <!-- [ Header ] start -->
+      <app-header></app-header>
+      <div class="pcoded-main-container">
+        <div class="pcoded-wrapper">
+          <!-- [ navigation menu ] start -->
+          <app-sidebar></app-sidebar>
+          <!-- [ navigation menu ] end -->
+          <div class="pcoded-content">
+            <!-- [ breadcrumb ] start -->
+            <div class="page-header card">
+              <div class="row align-items-end">
+                <div class="col-lg-8">
+                  <div class="page-header-title">
+                    <i class="feather icon-mail bg-c-blue"></i>
+                    <div class="d-inline">
+                      <h3>Send Email</h3>
+                      <span></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="page-header-breadcrumb">
+                    <ul class=" breadcrumb breadcrumb-title">
+                      <li class="breadcrumb-item">
+                        <a href="../index.html">
+                          <i class="feather icon-home"></i>
+                        </a>
+                      </li>
+                      <li class="breadcrumb-item">
+                        <a href="email-compose.html#!"> Send-Email</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- [ breadcrumb ] end -->
+            <div class="pcoded-inner-content">
+              <!-- Main-body start -->
+              <div class="main-body">
+                <div class="page-wrapper">
+                  <!-- Page-body start -->
+                  <div class="page-body">
+                    <div class="card">
+                      <!-- Email-card start -->
+                      <div class="card-block email-card">
+                        <div class="row">
+                          <div class="col-lg-12 col-xl-3">
+                            <div class="user-head row">
+                              <div class="user-face">
+                                <img class="img-fluid" src="assets/files/assets/images/logo1.png" alt="Theme-Logo" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-12 col-xl-9">
+                            <div class="mail-box-head row justify-content-end">
+                              <div class="col-auto"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <!-- Left-side section start -->
+                          <div class="col-lg-12 col-xl-3">
+                            <div class="user-body">
+                              <div class="p-20 text-center"></div>
+                              <ul class="page-list nav nav-tabs flex-column">
+                                <li class="nav-item mail-section">
+                                  <a class="nav-link waves-effect  d-block" href="email-inbox.html">
+                                    <i class="icofont icofont-inbox"></i> Compose Email </a>
+                                </li>
+                                <li class="nav-item mail-section">
+                                  <a class="nav-link waves-effect  d-block" href="">
+                                    <i class="icofont icofont-file-text"></i> Templates </a>
+                                </li>
+                                <li class="nav-item mail-section">
+                                  <a class="nav-link waves-effect  d-block" href="">
+                                    <i class="icofont icofont-paper-plane"></i> Sent E-Mails </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <!-- Left-side section end -->
+                          <!-- Right-side section start -->
+                          <div class="col-lg-12 col-xl-9">
+                            <div class="mail-body">
+                              <div class="mail-body">
+                                <div class="mail-body-content">
+                                  <br>
+                                 <br>
+                                  <form #myForm="ngForm" class="form-material">
+                                    <div class="col-sm-12 col-xl-3 m-b-30">
+                                      <h5 class="sub-title">Sender Email Address:</h5>
+                                      <select name="select" class="form-control form-control-primary">
+                                          <option value="opt1">Select One Email Only</option>
+                                          <option value="opt2">admin@gmail.com</option>
+                                          <option value="opt3">sanlam@gmail.com</option>   
+                                      </select>
+                                  </div>
+                        
+                                    <div class="form-group form-primary">
+                                      <input type="email" name="footer-email" class="form-control" required="">
+                                      <span class="form-bar"></span>
+                                      <label class="float-label">To</label>
+                                    </div>
+                                    <br>
+                                    <div class="form-group">
+                                      <div class="row">
+                                        <div class="col-md-6">
+                                          <div class="form-group form-primary">
+                                            <input type="email" name="footer-email" class="form-control" required="">
+                                            <span class="form-bar"></span>
+                                            <label class="float-label">Cc</label>
+                                          </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                          <div class="form-group form-primary">
+                                            <input type="email" name="footer-email" class="form-control" required="">
+                                            <span class="form-bar"></span>
+                                            <label class="float-label">Bcc</label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <br>
+                                    <div class="form-group form-primary">
+                                      <input type="text" name="footer-email" class="form-control" required="">
+                                      <span class="form-bar"></span>
+                                      <label class="float-label">Subject</label>
+                                    </div>
+                                    <br>
+                                    
+                                    <button type="button" [disabled]="!myForm.valid" class="btn btn-primary btn-xlg waves-effect waves-light">Send Email</button>
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Right-side section end -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Page-body end -->
+                </div>
+              </div>
+              <!-- Main-body end -->
+              <div id="styleSelector"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
